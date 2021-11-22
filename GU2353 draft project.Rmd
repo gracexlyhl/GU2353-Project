@@ -1,0 +1,19 @@
+---
+title: "GU2353 Project"
+author: "Grace Lin"
+date: "11/22/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/grace/OneDrive - nyu.edu/GU2353 Regression I/Project")
+```
+
+
+```{r}
+bodyfat <- read.csv("bodyfat.csv")
+
+
+```
+
