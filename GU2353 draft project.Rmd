@@ -1,6 +1,6 @@
 ---
 title: "GU2353 Project"
-author: "Grace Lin"
+author: "Eat Butter Feel Better"
 date: "11/22/2021"
 output: pdf_document
 ---
@@ -11,9 +11,17 @@ setwd("C:/Users/grace/OneDrive - nyu.edu/GU2353 Regression I/Project")
 ```
 
 
-```{r}
-bodyfat <- read.csv("bodyfat.csv")
+```{r Data Preprocessing}
+raw_data <- read.csv("bodyfat.csv")
+bodyfat <- raw_data #Copy the dataset for data cleaning
+bodyfat$Waist <- bodyfat$Waist*2.54
+bodyfat$Height <- bodyfat$Height*2.54
+summary(bodyfat)
+which(is.na(bodyfat)) #No NA in the dataset
+```
 
-
+```{r Full model}
+lmod_full <- lm(Pct.BF ~ ., bodyfat) 
+summary(lmod_full)
 ```
 
